@@ -1,0 +1,115 @@
+3、列表
+	1、列表项标识
+		属性：list-style-type
+		取值：
+			1、none : 无标记
+			2、disc 
+			3、circle
+			4、square
+			5、... ...
+	2、列表项图像
+		属性:list-style-image
+		取值:url()
+	3、列表项位置
+		属性:list-style-position
+		取值：
+			outside : 默认值，标识位于列表项区域之外
+			inside : 标记放在列表项区域之内
+	4、列表属性
+		属性：list-style
+		取值：type url position;
+		常用方式：list-style:none;
+1、浮动
+	1、定位
+		普通流定位(文档流定位)
+		浮动定位
+		相对定位
+		绝对定位
+		固定定位
+	2、浮动定位
+		1、特征
+			1、脱离文档流-不占据页面空间,后续元素上前补位
+			2、会停靠父元素的左边或右边，或者停靠在其他平级已浮动元素边缘上
+			3、依然包含在父元素内
+			4、让多个块级元素在一行内显示
+		2、语法
+			属性：float
+			取值：
+				none/left/right
+		3、浮动引发的特殊效果
+			1、父元素宽度已经不足以包含所有的已浮动子元素，最后一个将换行
+			2、元素浮动起来后，宽度将变得自适应
+			3、行内元素，行内块元素一旦浮动起来后，将变成块级元素
+			4、文本，行内元素，行内块元素采用环绕的方式进行排列，会巧妙的避开浮动元素而不会被压住
+		4、清除浮动
+			属性：clear
+			取值：
+				none/left/right/both
+		5、浮动元素对父元素带来的影响
+			对父元素高度带来的影响
+			1、设置父元素高度
+				弊端：必须知道父元素的高度
+			2、设置父元素也浮动
+				弊端：对后续元素有影响
+			3、为父元素设置 overflow
+				取值为：hidden 或 auto
+				弊端：如果有内容要溢出显示也会被一同隐藏了
+			4、在父元素中，追加空块级子级元素,并设置其clear属性为both
+				<div style="clear:both;"></div>
+2、显示
+	1、显示方式
+		属性：display
+		取值：
+			1、none
+				隐藏，脱离文档流-不占据页面空间
+			2、block
+				块级
+			3、inline
+				行内
+			4、inline-block
+				行内块
+				除radio和checkbox外的其他行内块元素，是允许修改尺寸的
+
+				允许在一行内显示多个元素
+	2、显示效果
+		1、可见性
+			属性：visibility
+			取值：
+				1、visible
+					可见的
+				2、hidden
+					隐藏，但是会占据页面空间
+				3、collapse
+		2、透明度
+			属性：opacity
+			取值：0.0(完全透明) ~ 1.0(完全不透明)
+		3、垂直对齐方式
+			属性：vertical-align
+			取值：
+				1、baseline
+					基线对齐
+				2、top
+				3、middle
+				4、bottom
+	3、光标
+		属性：cursor
+		取值：pointer
+3、列表
+	1、列表项显示标识
+		属性：list-style-type
+		取值：
+			none
+			... ...
+	2、列表项图像
+		属性：list-style-image
+		取值：url()
+	3、列表项位置
+		属性：list-style-position
+		取值：
+			outside ：默认值
+			inside ：列表项区域之内
+	4、列表属性
+		属性：list-style
+		取值：type url positioin
+
+		常用方式：list-style:none;
