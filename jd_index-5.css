@@ -1,0 +1,235 @@
+/*测试属性*/
+#banner,#main,#foot_box,#footer{
+	border: 1px solid #000;
+}
+/*页面通用样式*/
+body{
+	font: 12px "微软雅黑",Arial,Helvetica,sans-serif;
+	color: #666;
+	margin: 0;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/*类选择器*/
+.lf{float: left;}
+.rt{float: right;}
+.clear{clear: both;}
+/*颜色ff0700*/
+a{
+	color: #666;
+	text-decoration: none;
+}
+a:hover{
+	color: #ff0700;
+	text-decoration: underline;
+}
+/*页面布局*/
+#top_box,#top_main,#nav,#banner,#main,#foot_box,#footer{
+	width: 1211px;
+	margin: 0 auto;
+}
+/*#top 灰色长条*/
+#top{
+	/*宽度、高度、背景颜色*/
+	width: 100%;
+	height: 30px;
+	background-color: #f7f7f7;
+	line-height: 30px;
+}
+#top_box img{
+	margin-top: 9px;
+	margin-right: 5px;
+}
+#top_box>ul>li{
+	float: left;
+	margin-right: 5px;
+}
+/*列表项中的b标记模拟分割线（边框）*/
+#top_box>ul>li b{
+	border-left: 1px solid #ddd;
+	margin-right: 5px;
+}
+/*会员俱乐部背景图片*/
+li.vip a{
+	/*左内边距：（24+5）背景属性*/
+	padding-left: 29px;
+	background: url(Images/vip.jpg) no-repeat left center;
+}
+/*企业频道：背景图处理*/
+li.BJD a{
+	padding-left: 26px;
+	background: url(Images/dakehu.jpg) no-repeat left center;
+}
+/*手机京东：北京处理*/
+li.phone a{
+	/*左内边距，行内块，高度，行高，背景*/
+	padding-left: 18px;
+	display: inline-block;
+	height: 22px;
+	line-height: 22PX;
+	background: url(Images/iconlist_2.png) no-repeat -128px -360px;
+}
+li.phone a:hover{
+	background-position: -128px -399px;
+}
+/*客户服务*/
+li.service>a{
+	/*左右内边距模拟元素宽度*/
+	padding: 0 15px;
+	/*行内块 高度(26)，行高*/
+	display: inline-block;
+	height: 26px;
+	line-height: 26px;
+	/*边框：左右上边框*/
+	border: 1px solid transparent;
+	border-bottom: 0;
+	/*背景*/
+	background: url(Images/jt_down.jpg) no-repeat 95% center;
+
+}
+/*客户服务的弹出菜单*/
+li.service{
+	/*相对定位 为了配合#service_items做相对定位*/
+	position: relative;
+}
+#service_items{
+	/*宽度,左右下边框,背景颜色*/
+	width: 80px;
+	border: 1px solid #ddd;
+	border-top: 0;
+	box-sizing: border-box;
+	background-color: #fff; 
+	/*水平居中对齐*/
+	text-align: center;
+	/*绝对定位*/
+	position: absolute;
+	top: 28px;
+	left: 6px;
+	/*默认为隐藏*/
+	display: none;
+}
+li.service:hover #service_items{
+	display: block;
+
+}
+li.service:hover>a{
+	/*边框颜色，背景颜色为白色，更换背景图*/
+	border-color: #ddd;
+	background-color: #fff;
+	background-image: url(Images/jt_up.jpg);
+}
+/*logo和搜索框*/
+#top_main{
+	padding: 10px 0;
+}
+#search_box {
+/*左浮动 宽度 左右边距*/
+float: left;
+width: 500px;
+margin: 0 80px 0 40px;
+}
+#search_box div.search{
+	/*宽度，高度，背景颜色*/
+	width: 100%;
+	height: 30px;
+	background-color: #e4393c;
+	/*边框或内边距*/
+	padding: 3px;
+}
+#search_box div.search input.txtSearch{
+	/*宽度，高度，取消边框，取消轮廓*/
+	width: 410px;
+	height: 30px;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+#search_box button{
+	/*宽度，高度，取消边框，背景颜色，文字：大小，颜色，加粗*/
+	width: 80px;
+	height: 28px;/*测试30px*/
+	border: 0;
+	background-color: #e4393c;
+	color: #fff;
+	font-weight: bold;
+}
+#search_box div.hot_words{
+	margin-top: 5px;
+	color: #999;
+	height: 16px;
+	overflow: hidden;
+}
+#search_box div.hot_words a{
+	color: #999;
+}
+#my_jd{
+	/*左浮动，边框，背景*/
+	float: left;
+	border: 1px solid #efefef;
+	background-color: #f7f7f7;
+	/*左内边距，高度，行高*/
+	padding-left: 30px;
+	height: 28px;
+	line-height: 28px;
+	background: #f7f7f7 url(Images/iconlist_2.png) no-repeat -116px -25px;
+	/*设置宽度以便三角显示*/
+	width: 72px;
+
+}
+#my_jd b{
+	/*边框 颜色透明*/
+	border: 5px solid transparent;
+	/*上边框颜色：#ccc*/
+	border-top-color: #ccc;
+	position: relative;
+	top: 11px;
+}
+#my_jd:hover{
+	background-position: -116px -55px;
+	background-color: #fff;
+	cursor: pointer;
+} 
+#nav{
+	height: 40px;
+	background-color: #e64346;
+}
+#nav>p{
+	/*左浮动，宽度，高度，背景*/
+	float: left;
+	width: 210px;
+	height: 40px;
+	background-color: #cd2a2c;
+}
+#nav>p a{
+	/*左浮动，左右边距，行高*/
+	float: left;
+	padding-left: 15px;
+	line-height: 40px;
+	/*文本：大小，颜色，加粗，取消下划线*/
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+#nav li{
+	float: left;
+}
+#nav li a{
+	/*宽度，高度，行高*/
+	float: left;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	/*文本，颜色，加粗，大小，取消下划线，水平居中*/
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+}
+#nav li a:hover{
+	background-color: #bd2a2c;
+}
